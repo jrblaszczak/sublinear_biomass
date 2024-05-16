@@ -9,7 +9,7 @@ lapply(c("plyr","dplyr","ggplot2","cowplot","lubridate",
          "MCMCglmm"), require, character.only=T)
 
 theme_set(theme(legend.position = "none",
-                  panel.background = element_rect(color = "black", fill=NA, size=1),
+                  panel.background = element_rect(color = "black", fill=NA, linewidth = 1),
                   axis.text = element_text(size=12),
                   axis.title = element_text(size=12)))
 

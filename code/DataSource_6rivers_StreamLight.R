@@ -11,13 +11,13 @@ lapply(c("plyr","dplyr","ggplot2","cowplot",
 ##############################
 ## Data Import & Processing ##
 ##############################
-data <- readRDS("./rds files/NWIS_6site_subset_SL.rds")
+data <- readRDS("../data/NWIS_6site_subset_SL.rds")
 data$date <- as.POSIXct(as.character(data$date), format="%Y-%m-%d")
 
-site_info <- readRDS("./rds files/NWIS_6siteinfo_subset_SL.rds")
+site_info <- readRDS("../data/NWIS_6siteinfo_subset_SL.rds")
 
 # Read in StreamLight processed data (Savoy)
-SL <- readRDS("./rds files/StreamLight_daily_6riv_all.rds")
+SL <- readRDS("../data/StreamLight_daily_6riv_all.rds")
 colnames(SL)[colnames(SL) == "Date"] <- "date"
 
 ## Join data and StreamLight
